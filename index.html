@@ -49,7 +49,7 @@ p{margin:0}
 .btn.line:hover{background:var(--chip)}
 .portrait{position:relative;width:min(100%,320px);aspect-ratio:1;border-radius:50%;background:var(--band);margin:0 auto;display:grid;place-items:center;overflow:hidden;border:8px solid var(--card)}
 .portrait span{font-family:var(--serif);font-size:6rem;font-weight:700;color:var(--ink)}
-.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 
 /* facts strip */
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding-bottom:4rem}
@@ -71,6 +71,7 @@ section h2{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:.75rem}
 .entry:last-child{margin-bottom:0}
 .entry b{display:block;font-weight:500}
 .entry small{display:block;color:var(--muted);font-size:.98rem;line-height:1.5}
+.note{color:var(--muted);font-size:.98rem;margin-top:1.25rem}
 .entry ul{margin:.5rem 0 0;padding-left:1.1rem;font-size:1rem;line-height:1.6}
 .entry li{margin-bottom:.3rem}
 
@@ -150,7 +151,7 @@ footer{padding:1.75rem 0 2.5rem;color:var(--muted);font-size:.95rem;text-align:c
     <div class="facts">
       <div class="fact"><b>7+ projects</b><span>Self-built, each with a recorded walkthrough</span></div>
       <div class="fact"><b>Cum Laude</b><span>BS Computer Science, ICCT Colleges</span></div>
-      <div class="fact"><b>Hackathon champion</b><span>iTECH 2023, three awards</span></div>
+      <div class="fact"><b>3 years</b><span>Working in CRM and order systems</span></div>
     </div>
   </div>
 
@@ -172,28 +173,12 @@ footer{padding:1.75rem 0 2.5rem;color:var(--muted);font-size:.95rem;text-align:c
           </div>
         </div>
         <div class="panel">
-          <h3>Education and awards</h3>
+          <h3>Education</h3>
           <div class="entry">
             <b>BS Computer Science, Cum Laude</b>
             <small>ICCT Colleges, Cainta, Rizal<br>December 2024</small>
           </div>
-          <div class="entry">
-            <b>iTECH Hackathon 2023, Champion</b>
-            <small>Best Innovative Idea, Best Design, Best Pitch and Presentation</small>
-            <ul><li>Built a prototype with a 3-person team that detects early signs of plant rot from pixel colors.</li></ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <h2>Skills and expertise</h2>
-      <p class="sub">The tools I have actually used in the projects below.</p>
-      <div class="skills">
-        <div class="panel"><h3>Automation and integration</h3>
-          <ul class="tags"><li>n8n</li><li>Zapier</li><li>Make.com</li><li>GoHighLevel</li><li>Webhooks</li><li>REST APIs</li><li>HTTP requests</li><li>OAuth2</li></ul></div>
+          <p class="note">Also: iTECH Hackathon 2023, Champion (team of 3)</p>
         <div class="panel"><h3>AI and LLM</h3>
           <ul class="tags"><li>LLM API integration (Groq)</li><li>Prompt design for structured output</li><li>Local LLMs (Ollama)</li></ul></div>
         <div class="panel"><h3>Data and tools</h3>
@@ -263,8 +248,36 @@ footer{padding:1.75rem 0 2.5rem;color:var(--muted);font-size:.95rem;text-align:c
             <a href="https://airtable.com/app5dYrZimKgWbjU1/shrJxTANt2ScpfBue" target="_blank" rel="noopener">Live view</a>
           </div>
         </article>
+
+        <article class="proj">
+          <h3>GHL Lead Capture Funnel</h3>
+          <p class="stack">GoHighLevel</p>
+          <p class="summary">A lead capture funnel built in GoHighLevel to collect new leads into the CRM.</p>
+          <div class="links">
+            <a href="https://www.loom.com/share/abd04fad57bf4a6bbabaf3bb8931f1c9" target="_blank" rel="noopener">Walkthrough</a>
+          </div>
+        </article>
+
+        <article class="proj">
+          <h3>Graphic Design Inquiry CRM</h3>
+          <p class="stack">Google Forms, Zapier, Make.com, Notion</p>
+          <p class="summary">Client inquiries come in through a form and are routed into a Notion CRM based on the budget.</p>
+          <ul class="flow" aria-label="Pipeline"><li>Google Form</li><li>Zapier / Make</li><li>Notion</li></ul>
+          <div class="links">
+            <a href="https://www.loom.com/share/fbde1d5216c146aea22e676ef352a518" target="_blank" rel="noopener">Walkthrough</a>
+          </div>
+        </article>
+
+        <article class="proj">
+          <h3>Freelance Ops Dashboard</h3>
+          <p class="stack">Notion</p>
+          <p class="summary">A Notion dashboard for tracking a freelancer's clients, projects, and day-to-day work.</p>
+          <div class="links">
+            <a href="https://app.notion.com/p/Freelance-Dashboard-36c4294d9316806c8cdaf5bf0bc36dd7" target="_blank" rel="noopener">Live view</a>
+          </div>
+        </article>
       </div>
-      <p class="more"><strong>Also built:</strong> Graphic Design Inquiry CRM (Google Forms, Zapier, Make.com, Notion), Client Tracker (Google Sheets), Freelance Ops Dashboard (Notion), and a GHL Lead Capture Funnel. For software practice I followed tutorials to build an Employee Management System (Java, Spring Boot, MySQL) and a Mortgage Calculator (Java).</p>
+      <p class="more"><strong>Also built:</strong> a Client Tracker in Google Sheets. For software practice I followed tutorials to build an Employee Management System (Java, Spring Boot, MySQL) and a Mortgage Calculator (Java).</p>
     </div>
   </section>
 
