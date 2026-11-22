@@ -64,7 +64,17 @@ section h2{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:.75rem}
 
 /* about */
 .about-text{max-width:42rem;margin-bottom:2.5rem}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.job{display:grid;grid-template-columns:18rem 1fr;gap:2rem;align-items:start;margin-bottom:1.25rem}
+.job-meta h3{margin-bottom:.9rem}
+.job-meta b{display:block;font-weight:500}
+.job-meta small{display:block;color:var(--muted);font-size:.98rem;line-height:1.5;margin-top:.2rem}
+.job ul{margin:0;padding-left:1.15rem}
+.job li{margin-bottom:.6rem}
+.job li:last-child{margin-bottom:0}
+.edu{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 2.5rem}
+.edu h3{margin:0}
+.edu .entry{margin:0}
+.edu .note{margin:0;margin-left:auto}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.75rem}
 .panel h3{font-size:1.7rem;margin-bottom:1.1rem}
 .entry{padding-left:1rem;border-left:3px solid var(--band);margin-bottom:1.25rem}
@@ -111,7 +121,9 @@ footer{padding:1.75rem 0 2.5rem;color:var(--muted);font-size:.95rem;text-align:c
   body{font-size:1.0625rem}
   .hero{grid-template-columns:1fr;gap:2rem;padding:3rem 0 2.5rem;text-align:left}
   .portrait{order:-1;width:220px;margin:0}
-  .facts,.two,.skills,.grid{grid-template-columns:1fr}
+  .facts,.skills,.grid,.job{grid-template-columns:1fr}
+  .job{gap:1rem}
+  .edu .note{margin-left:0}
   .bar-in{border-radius:24px}
   section{padding:3.25rem 0}
 }
@@ -151,7 +163,7 @@ footer{padding:1.75rem 0 2.5rem;color:var(--muted);font-size:.95rem;text-align:c
     <div class="facts">
       <div class="fact"><b>7+ projects</b><span>Self-built, each with a recorded walkthrough</span></div>
       <div class="fact"><b>Cum Laude</b><span>BS Computer Science, ICCT Colleges</span></div>
-      <div class="fact"><b>3 years</b><span>Working in CRM and order systems</span></div>
+      <div class="fact"><b>3 years in customer operations</b><span>Processed 20 to 40 orders and customer calls a day in CRM and order systems</span></div>
     </div>
   </div>
 
@@ -159,26 +171,36 @@ footer{padding:1.75rem 0 2.5rem;color:var(--muted);font-size:.95rem;text-align:c
     <div class="wrap">
       <h2>About me</h2>
       <p class="about-text">I'm a Computer Science graduate who spent three years handling orders and customer calls in CRM systems. That showed me which manual processes are worth automating, so I built projects with n8n, Airtable, GoHighLevel, and LLM APIs to put it into practice. I'm looking for an AI automation or workflow role, with the goal of growing into applied AI engineering.</p>
-      <div class="two">
-        <div class="panel">
+      <div class="panel job">
+        <div class="job-meta">
           <h3>Work experience</h3>
-          <div class="entry">
-            <b>Customer Service Representative</b>
-            <small>Quantrics Enterprises Inc. (Bell Canada account), Taytay, Rizal<br>Sep 2023 to Sep 2026</small>
-            <ul>
-              <li>Handled about 20 to 40 orders and customer contacts a day by phone in internal CRM and order systems.</li>
-              <li>Worked with back office, help desk, and dispatch to resolve escalated issues.</li>
-              <li>Reached a 4 to 5% monthly upsell conversion against a 5% target.</li>
-            </ul>
-          </div>
+          <b>Customer Service Representative</b>
+          <small>Quantrics Enterprises Inc. (Bell Canada account), Taytay, Rizal<br>Sep 2023 to Sep 2026</small>
         </div>
-        <div class="panel">
-          <h3>Education</h3>
-          <div class="entry">
-            <b>BS Computer Science, Cum Laude</b>
-            <small>ICCT Colleges, Cainta, Rizal<br>December 2024</small>
-          </div>
-          <p class="note">Also: iTECH Hackathon 2023, Champion (team of 3)</p>
+        <ul>
+          <li>Handled about 20 to 40 orders and customer contacts a day by phone, processing and modifying orders in internal CRM and order management systems.</li>
+          <li>Worked with back office, help desk, and dispatch teams to resolve escalated issues.</li>
+          <li>Reached a 4 to 5% monthly upsell conversion against a 5% target while keeping records accurate.</li>
+        </ul>
+      </div>
+      <div class="panel edu">
+        <h3>Education</h3>
+        <div class="entry">
+          <b>BS Computer Science, Cum Laude</b>
+          <small>ICCT Colleges, Cainta, Rizal, December 2024</small>
+        </div>
+        <p class="note">Also: iTECH Hackathon 2023, Champion (team of 3)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills and expertise</h2>
+      <p class="sub">The tools I have actually used in the projects below.</p>
+      <div class="skills">
+        <div class="panel"><h3>Automation and integration</h3>
+          <ul class="tags"><li>n8n</li><li>Zapier</li><li>Make.com</li><li>GoHighLevel</li><li>Webhooks</li><li>REST APIs</li><li>HTTP requests</li><li>OAuth2</li></ul></div>
         <div class="panel"><h3>AI and LLM</h3>
           <ul class="tags"><li>LLM API integration (Groq)</li><li>Prompt design for structured output</li><li>Local LLMs (Ollama)</li></ul></div>
         <div class="panel"><h3>Data and tools</h3>
@@ -277,7 +299,7 @@ footer{padding:1.75rem 0 2.5rem;color:var(--muted);font-size:.95rem;text-align:c
           </div>
         </article>
       </div>
-      <p class="more"><strong>Also built:</strong> a Client Tracker in Google Sheets. For software practice I followed tutorials to build an Employee Management System (Java, Spring Boot, MySQL) and a Mortgage Calculator (Java).</p>
+      <p class="more"><strong>Also built:</strong> a Client Tracker in Google Sheets. <strong>Software practice:</strong> an Employee Management System (Java, Spring Boot, MySQL, REST CRUD) and a Mortgage Calculator (Java).</p>
     </div>
   </section>
 
